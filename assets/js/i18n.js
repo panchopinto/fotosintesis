@@ -7,7 +7,31 @@
   }
   const L = getLang();
   const T = {
+    // Added site-wide keys
     es: {
+      hModules: "Módulos",
+      hKpis: "KPIs del módulo",
+      hHowTo: "⚙️ Cómo usar",
+      tipPhase: "💡 Tip: Asocia <strong>fase luminosa</strong> (tilacoides) con energía (ATP/NADPH) y <strong>fase oscura</strong> (estroma) con fijación de carbono.",
+      step1: "<strong>Captura de luz (Tilacoides)</strong> — Los <em>complejos antena</em> con clorofila absorben fotones y excitan electrones.",
+      step2: "<strong>Transporte electrónico</strong> — PSII → citocromo b6f → PSI; se bombea H⁺ al lumen.",
+      step3: "<strong>Fotofosforilación</strong> — Gradiente de protones impulsa <em>ATP sintasa</em> → ATP.",
+      step4: "<strong>Reducción</strong> — NADP⁺ + e⁻ → NADPH (lado estromal).",
+      step5: "<strong>Ciclo de Calvin</strong> — Fijación (RuBisCO), reducción y regeneración de RuBP → síntesis de <em>G3P</em> y glucosa.",
+      eqBalance: "<strong>6 CO₂ + 6 H₂O + energía lumínica → C₆H₁₂O₆ + 6 O₂</strong>",
+      eqDetail: "En detalle: la luz impulsa la generación de <strong>ATP</strong> y <strong>NADPH</strong> que alimentan el <em>Ciclo de Calvin</em> para fijar CO₂.",
+      inputs: "🌞 Entradas",
+      outputs: "🍃 Salidas",
+      resDesc: "Modelos sugeridos (.glb) y referencias están listados en el README del proyecto. Aquí puedes añadir más enlaces de libre uso.",
+      tableRes: "🔗 Recurso",
+      tableDesc: "Descripción",
+      res1: "Cloroplasto — Sketchfab",
+      res1d: "Modelo para visualizar tilacoides y estroma.",
+      res2: "Membrana de tilacoide — Sketchfab",
+      res2d: "Detalle de complejos antena.",
+      res3: "ATP sintasa — Sketchfab",
+      res3d: "Visor del complejo F₀F₁ para explicar fotofosforilación."
+    
       appTitle: "Fotosíntesis — AR Biología",
       navHome: "🏠 Inicio",
       navProceso: "🌿 Proceso",
@@ -23,6 +47,29 @@
       helpBody: "Usa el menú para navegar. En “Cloroplasto 3D” puedes arrastrar y soltar un archivo .glb. Cambia el idioma con ES/EN en la barra superior."
     },
     en: {
+      hModules: "Modules",
+      hKpis: "Module KPIs",
+      hHowTo: "⚙️ How to use",
+      tipPhase: "💡 Tip: Link the <strong>light reactions</strong> (thylakoids) with energy (ATP/NADPH) and the <strong>dark reactions</strong> (stroma) with carbon fixation.",
+      step1: "<strong>Light capture (Thylakoids)</strong> — Antenna complexes with chlorophyll absorb photons and excite electrons.",
+      step2: "<strong>Electron transport</strong> — PSII → cytochrome b6f → PSI; H⁺ is pumped into the lumen.",
+      step3: "<strong>Photophosphorylation</strong> — Proton gradient drives <em>ATP synthase</em> → ATP.",
+      step4: "<strong>Reduction</strong> — NADP⁺ + e⁻ → NADPH (stromal side).",
+      step5: "<strong>Calvin cycle</strong> — Fixation (RuBisCO), reduction, and RuBP regeneration → <em>G3P</em> and glucose.",
+      eqBalance: "<strong>6 CO₂ + 6 H₂O + light energy → C₆H₁₂O₆ + 6 O₂</strong>",
+      eqDetail: "In detail: light drives <strong>ATP</strong> and <strong>NADPH</strong> synthesis feeding the <em>Calvin cycle</em> to fix CO₂.",
+      inputs: "🌞 Inputs",
+      outputs: "🍃 Outputs",
+      resDesc: "Suggested (.glb) models and references are listed in the project README. Add more open-use links here.",
+      tableRes: "🔗 Resource",
+      tableDesc: "Description",
+      res1: "Chloroplast — Sketchfab",
+      res1d: "Model to visualize thylakoids and stroma.",
+      res2: "Thylakoid membrane — Sketchfab",
+      res2d: "Detail of antenna complexes.",
+      res3: "ATP synthase — Sketchfab",
+      res3d: "F₀F₁ rotary complex to explain photophosphorylation."
+    
       appTitle: "Photosynthesis — AR Biology",
       navHome: "🏠 Home",
       navProceso: "🌿 Process",

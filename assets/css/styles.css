@@ -61,3 +61,27 @@ code.snip{background:#0b142a;border:1px solid #213255;padding:8px 10px;border-ra
   .nav{gap:6px}
   .btn{padding:8px 10px;font-size:14px}
 }
+
+
+/* === Centering adjustments requested === */
+.header .bar{display:flex;gap:12px;align-items:center;justify-content:space-between}
+.logo{flex:0 0 auto}
+.nav{flex:1 1 auto;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.hero{padding:28px 0 8px;text-align:center}
+.container .grid{justify-content:center}
+
+
+/* === Strong centering for header/nav and hero === */
+.header .bar{display:grid;grid-template-columns:auto 1fr;align-items:center}
+.nav{justify-self:center;justify-content:center}
+.hero{text-align:center}
+
+/* Make cards area feel centered on wide screens */
+.container .grid{margin-left:auto;margin-right:auto}
+
+/* Improve model-viewer gestures on touch devices */
+model-viewer{touch-action:none; -webkit-user-select:none; user-select:none}
+
+/* Center cards strongly */
+.card{max-width:980px;margin-left:auto;margin-right:auto}
+.container .grid{max-width:1000px;margin-left:auto;margin-right:auto}
