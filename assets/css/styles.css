@@ -174,3 +174,31 @@ model-viewer{touch-action:none; -webkit-user-select:none; user-select:none}
   .utils{gap:6px}
   .utils .btn{padding:7px 9px}
 }
+
+
+/* === Responsive polish for desktop/tablet/mobile and AR === */
+:root{
+  --space: clamp(10px, 1.6vw, 18px);
+  --radius: 16px;
+}
+.container{padding: var(--space)}
+.btn{min-height:44px; line-height:1.1; border-radius: 12px}
+.btn .emoji{line-height:1}
+h1{font-size: clamp(22px, 2.4vw, 34px)}
+h2{font-size: clamp(18px, 2vw, 24px)}
+.card{border-radius: var(--radius)}
+/* Respect safe areas on phones with notches */
+.header{padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right)}
+/* Orientation helpers */
+@media (orientation: landscape) and (max-height: 520px){
+  .hero{padding-top:8px}
+}
+/* Prefer reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .btn{transition:none}
+  *{scroll-behavior:auto}
+}
+/* AR/VR full-bleed on small screens */
+.ar-fullbleed{position:fixed !important; inset:0 !important; width:100vw !important; height:100vh !important; background:#000 !important; z-index: 1}
+
+@media(max-width:360px){ .btn{font-size:12px;padding:6px 8px} }

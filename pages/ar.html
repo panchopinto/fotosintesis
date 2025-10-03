@@ -2,11 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
   <title>🅰️🆁 AR — Fotosíntesis</title>
   <link rel="stylesheet" href="../assets/css/styles.css"/>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.min.js"></script>
+  <meta name="theme-color" content="#0b1020"/>
 </head>
 <body style="margin:0; overflow:hidden;">
   
@@ -49,7 +50,7 @@
     <h2 class="section-title">🅰️🆁 Vista AR</h2>
     <p>Apunta al marcador <code class="snip">hiro</code>. Reemplaza la ruta del modelo en el código si deseas cargar tu propio <strong>.glb</strong>.</p>
   </main>
-  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+  <a-scene class="ar-fullbleed" embedded vr-mode-ui="enabled: true" embedded arjs="sourceType: webcam; debugUIEnabled: false;">
     <a-marker preset="hiro">
       <a-entity gltf-model="/assets/models/fotosintesis__bella_denisa.glb" scale="0.4 0.4 0.4"></a-entity>
     </a-marker>
@@ -67,5 +68,14 @@
 </div>
 
   <script src="/assets/js/i18n.js"></script>
+
+<div class="modal" id="helpAR">
+  <div class="panel">
+    <h3>Ayuda AR/VR</h3>
+    <p>Si tu navegador pide permisos de cámara o movimiento, acéptalos. En iOS, habilita “Movimiento y orientación”.</p>
+    <div style="display:flex;justify-content:flex-end"><button class="btn" data-close>Cerrar</button></div>
+  </div>
+</div>
+
 </body>
 </html>
