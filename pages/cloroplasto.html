@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>🧬 Cloroplasto 3D — Fotosíntesis</title>
+  <link rel="stylesheet" href="../assets/css/styles.css"/>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  
+<header class="header">
+  <div class="container bar">
+    <div class="logo">
+      <div class="mark" title="Fotosíntesis — AR">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c-3 5-3 8 0 12 3-4 3-7 0-12zm-1 12c-5 3-8 3-9 8 5-1 6-4 9-8zm2 0c3 4 4 7 9 8-1-5-4-5-9-8z"/></svg>
+      </div>
+      <strong>Fotosíntesis — AR Biología</strong>
+    </div>
+    <nav class="nav">
+      <a class="btn" href="index.html">🏠 Inicio</a>
+      <a class="btn blue" href="pages/proceso.html">🌿 Proceso</a>
+      <a class="btn primary" href="pages/ecuacion.html">🧪 Ecuación</a>
+      <a class="btn orange" href="pages/cloroplasto.html">🧬 Cloroplasto 3D</a>
+      <a class="btn pink" href="pages/interactive.html">🎮 Interactivo</a>
+      <a class="btn" href="pages/recursos.html">📥 Recursos</a>
+      <a class="btn" href="pages/ar.html">🅰️🆁 AR</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <h2 class="section-title">🧬 Cloroplasto 3D</h2>
+    <div class="grid">
+      <div class="card card--lg">
+        <p>Arrastra un archivo <code class="snip">.glb</code> al panel inferior o usa el botón para cargar. Recomiendo modelos: cloroplasto, membrana de tilacoide o ATP sintasa.</p>
+        <div id="drop" class="notice" style="margin-top:10px">
+          <strong>📥 Suelta tu .glb aquí</strong> o <button class="btn" id="pick">📂 Elegir archivo</button>
+          <input type="file" id="file" accept=".glb,.gltf" style="display:none"/>
+        </div>
+        <div style="margin-top:12px;border-radius:16px;overflow:hidden;border:1px solid #22304d;background:#0a0f22">
+          <model-viewer id="viewer" src="" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate tone-mapping="neutral" exposure="1.1" style="width:100%;height:520px;background:#0a0f22"></model-viewer>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+<footer class="footer container">
+  <div class="grid">
+    <div class="card card--lg">
+      <div class="kpi"><span class="emoji">📧</span> <span>Contacto directo: <strong>belen.acpe@gmail.com</strong> · <strong>+56 9 6266 4960</strong></span></div>
+      <p style="margin-top:8px">Hecho con ❤️ para el Liceo Bicentenario de Excelencia Polivalente San Nicolás — Proyecto AR educativo.</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="../assets/js/loader.js"></script>
+</body>
+</html>

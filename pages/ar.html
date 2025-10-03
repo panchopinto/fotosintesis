@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>🅰️🆁 AR — Fotosíntesis</title>
+  <link rel="stylesheet" href="../assets/css/styles.css"/>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style="margin:0; overflow:hidden;">
+  
+<header class="header">
+  <div class="container bar">
+    <div class="logo">
+      <div class="mark" title="Fotosíntesis — AR">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c-3 5-3 8 0 12 3-4 3-7 0-12zm-1 12c-5 3-8 3-9 8 5-1 6-4 9-8zm2 0c3 4 4 7 9 8-1-5-4-5-9-8z"/></svg>
+      </div>
+      <strong>Fotosíntesis — AR Biología</strong>
+    </div>
+    <nav class="nav">
+      <a class="btn" href="index.html">🏠 Inicio</a>
+      <a class="btn blue" href="pages/proceso.html">🌿 Proceso</a>
+      <a class="btn primary" href="pages/ecuacion.html">🧪 Ecuación</a>
+      <a class="btn orange" href="pages/cloroplasto.html">🧬 Cloroplasto 3D</a>
+      <a class="btn pink" href="pages/interactive.html">🎮 Interactivo</a>
+      <a class="btn" href="pages/recursos.html">📥 Recursos</a>
+      <a class="btn" href="pages/ar.html">🅰️🆁 AR</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <h2 class="section-title">🅰️🆁 Vista AR</h2>
+    <p>Apunta al marcador <code class="snip">hiro</code>. Reemplaza la ruta del modelo en el código si deseas cargar tu propio <strong>.glb</strong>.</p>
+  </main>
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+    <a-marker preset="hiro">
+      <a-entity gltf-model="../assets/models/demo.glb" scale="0.4 0.4 0.4"></a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>

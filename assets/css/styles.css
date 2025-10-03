@@ -1,0 +1,63 @@
+
+/* Photosíntesis — AR Biología (mini repo) */
+:root {
+  --bg: #0b1020;
+  --card: #12172a;
+  --accent: #22c55e; /* green */
+  --accent-2: #38bdf8; /* blue */
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:linear-gradient(160deg,#0b1020 0%,#111827 100%);color:var(--text);font-family:Inter,ui-sans-serif,System-UI,Segoe UI,Roboto,Helvetica,Arial}
+a{color:var(--accent-2);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:18px}
+.header{position:sticky;top:0;background:rgba(11,16,32,0.8);backdrop-filter:blur(8px);border-bottom:1px solid #1f2937;z-index:50}
+.header .bar{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:10px 8px}
+.logo{display:flex;gap:10px;align-items:center}
+.logo .mark{width:36px;height:36px;border-radius:12px;background:radial-gradient(circle at 30% 30%, #34d399, #22c55e);display:grid;place-items:center;box-shadow:0 8px 24px rgba(34,197,94,.35)}
+.logo .mark svg{width:22px;height:22px;fill:white}
+.logo strong{letter-spacing:.4px}
+.nav{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid #243044;background:#12172a;border-radius:12px;color:var(--text);transition:transform .12s ease, background .2s ease, border .2s ease;cursor:pointer;font-weight:600}
+.btn:hover{transform:translateY(-1px);border-color:#2a3a58;background:#151b31}
+.btn.primary{background:linear-gradient(135deg,#22c55e,#16a34a);border-color:transparent}
+.btn.blue{background:linear-gradient(135deg,#60a5fa,#38bdf8);border-color:transparent}
+.btn.orange{background:linear-gradient(135deg,#f59e0b,#f97316);border-color:transparent}
+.btn.pink{background:linear-gradient(135deg,#fb7185,#e879f9);border-color:transparent}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
+.card{grid-column:span 12;background:var(--card);border:1px solid #1f273e;border-radius:18px;padding:18px;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+@media(min-width:720px){
+  .card--sm{grid-column:span 6}
+  .card--md{grid-column:span 8}
+  .card--lg{grid-column:span 12}
+}
+.card h2{margin:0 0 8px;font-size:22px}
+.card p{margin:0;color:var(--muted)}
+.kpi{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:#0f1530;border:1px solid #1d2442}
+.kpi .emoji{font-size:20px}
+.footer{margin-top:30px;padding:30px 0;color:var(--muted);border-top:1px dashed #253050}
+.hero{padding:28px 0 8px}
+.hero h1{font-size:28px;margin:6px 0 6px}
+.hero p{margin:0;color:var(--muted)}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;background:#0c142c;border:1px solid #203052;font-size:12px;color:#a2b5d6}
+.section-title{margin:6px 0 16px;font-size:18px;color:#a3e635}
+.list{display:grid;gap:10px}
+.list li{display:flex;gap:10px;align-items:start;background:#0f1530;padding:12px;border-radius:12px;border:1px solid #1a2242}
+.list .num{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:#172042;color:#9cc3ff;font-weight:800}
+hr.sep{border:0;border-top:1px dashed #293456;margin:20px 0}
+code.snip{background:#0b142a;border:1px solid #213255;padding:8px 10px;border-radius:10px;display:inline-block}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:20px}
+.modal .panel{background:#0f1530;border:1px solid #243255;border-radius:16px;padding:20px;max-width:560px;width:100%}
+.modal.open{display:flex}
+.table{width:100%;border-collapse:collapse;font-size:14px}
+.table th,.table td{border-bottom:1px solid #27304a;padding:10px;text-align:left}
+.table th{color:#9cc3ff;font-weight:700}
+.notice{padding:12px;border:1px solid #2b3a5d;background:#0e1632;border-radius:12px}
+/* mobile tweaks */
+@media(max-width:480px){
+  .nav{gap:6px}
+  .btn{padding:8px 10px;font-size:14px}
+}
