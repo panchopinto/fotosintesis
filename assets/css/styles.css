@@ -147,3 +147,30 @@ model-viewer{touch-action:none; -webkit-user-select:none; user-select:none}
 @media(min-width:1024px){
   .btn{padding:10px 14px}
 }
+
+
+/* === Responsive nav strategy ===
+   ≥1280px: 1 fila (no wrap)
+   1024–1279px: wrap permitido (2 filas)
+   640–1023px: wrap, botones más compactos
+   <640px: wrap, tamaño de fuente más pequeño
+*/
+@media(min-width:1280px){
+  .nav{flex-wrap:nowrap}
+  .btn{padding:10px 14px;font-size:16px}
+}
+@media(min-width:1024px) and (max-width:1279.98px){
+  .nav{flex-wrap:wrap}
+  .btn{padding:9px 12px;font-size:15px}
+}
+@media(min-width:640px) and (max-width:1023.98px){
+  .nav{flex-wrap:wrap}
+  .btn{padding:8px 10px;font-size:14px}
+  .utils .btn{padding:8px 10px}
+}
+@media(max-width:639.98px){
+  .nav{flex-wrap:wrap; gap:6px}
+  .btn{padding:7px 9px;font-size:13px;border-radius:10px}
+  .utils{gap:6px}
+  .utils .btn{padding:7px 9px}
+}
