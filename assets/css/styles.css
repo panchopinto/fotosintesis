@@ -109,3 +109,28 @@ model-viewer{touch-action:none; -webkit-user-select:none; user-select:none}
   background:linear-gradient(90deg, rgba(11,16,32,0) 0%, rgba(11,16,32,1) 100%);pointer-events:none
 }
 .header{position:sticky;top:0;z-index:50}
+
+
+/* === Equal card sizing on index === */
+.grid.equal-cards{
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: stretch;
+}
+.grid.equal-cards .card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.grid.equal-cards .card > *:last-child{
+  margin-top: auto; /* push last block to bottom for balance */
+}
+
+/* Optional: tighten vertical rhythm inside cards */
+.grid.equal-cards .card h2{ margin-bottom: 10px }
+.grid.equal-cards .kpi{ margin-top: 8px }
+
+
+/* === Global equal-height cards across the site === */
+.grid{align-items:stretch}
+.grid .card{height:100%;display:flex;flex-direction:column}
+.grid .card > *:last-child{margin-top:auto}
