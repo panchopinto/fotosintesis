@@ -10,25 +10,30 @@
   
 
 
+
 <header class="header">
   <div class="container bar">
     <div class="logo">
       <div class="mark" title="Fotosíntesis — AR">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c-3 5-3 8 0 12 3-4 3-7 0-12zm-1 12c-5 3-8 3-9 8 5-1 6-4 9-8zm2 0c3 4 4 7 9 8-1-5-4-5-9-8z"/></svg>
       </div>
-      <strong>Fotosíntesis — AR Biología</strong>
+      <strong id="titleApp">Fotosíntesis — AR Biología</strong>
     </div>
     <nav class="nav">
-      <a class="btn" href="/index.html">🏠 Inicio</a>
-      <a class="btn blue" href="/pages/proceso.html">🌿 Proceso</a>
-      <a class="btn primary" href="/pages/ecuacion.html">🧪 Ecuación</a>
-      <a class="btn orange" href="/pages/cloroplasto.html">🧬 Cloroplasto 3D</a>
-      <a class="btn pink" href="/pages/interactive.html">🎮 Interactivo</a>
-      <a class="btn" href="/pages/recursos.html">📥 Recursos</a>
-      <a class="btn" href="/pages/ar.html">🅰️🆁 AR</a>
+      <a class="btn" id="navHome" href="/index.html">🏠 Inicio</a>
+      <a class="btn blue" id="navProceso" href="/pages/proceso.html">🌿 Proceso</a>
+      <a class="btn primary" id="navEcuacion" href="/pages/ecuacion.html">🧪 Ecuación</a>
+      <a class="btn orange" id="navCloroplasto" href="/pages/cloroplasto.html">🧬 Cloroplasto 3D</a>
+      <a class="btn pink" id="navInteractivo" href="/pages/interactive.html">🎮 Interactivo</a>
+      <a class="btn" id="navRecursos" href="/pages/recursos.html">📥 Recursos</a>
+      <a class="btn" id="navAR" href="/pages/ar.html">🅰️🆁 AR</a>
+      <a class="btn" id="navAyuda" data-modal="help">❓ Ayuda</a>
+      <a class="btn" id="btnES" href="?lang=es" title="Español">ES</a>
+      <a class="btn" id="btnEN" href="?lang=en" title="English">EN</a>
     </nav>
   </div>
 </header>
+
 
 
 
@@ -66,5 +71,17 @@
 </footer>
 
 
+
+<div class="modal" id="help">
+  <div class="panel">
+    <h3 class="title-i18n" style="margin:0 0 8px">Ayuda</h3>
+    <p class="body-i18n">Usa el menú para navegar. En “Cloroplasto 3D” puedes arrastrar y soltar un archivo .glb. Cambia el idioma con ES/EN en la barra superior.</p>
+    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
+      <button class="btn" data-close>Cerrar</button>
+    </div>
+  </div>
+</div>
+
+  <script src="/assets/js/i18n.js"></script>
 </body>
 </html>
