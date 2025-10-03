@@ -134,3 +134,16 @@ model-viewer{touch-action:none; -webkit-user-select:none; user-select:none}
 .grid{align-items:stretch}
 .grid .card{height:100%;display:flex;flex-direction:column}
 .grid .card > *:last-child{margin-top:auto}
+
+
+/* === NAV: allow wrapping into two rows for better layout === */
+.nav.nowrap{flex-wrap:wrap; white-space:normal; overflow-x:visible; scroll-snap-type:none}
+.nav.nowrap .btn{scroll-snap-align:none}
+.header::after{display:none}
+/* Keep nav centered even when wrapped */
+.nav{justify-content:center; gap:8px}
+/* Slightly compact buttons for better fit without cramping */
+.btn{padding:9px 12px}
+@media(min-width:1024px){
+  .btn{padding:10px 14px}
+}
