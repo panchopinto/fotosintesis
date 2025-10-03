@@ -85,3 +85,27 @@ model-viewer{touch-action:none; -webkit-user-select:none; user-select:none}
 /* Center cards strongly */
 .card{max-width:980px;margin-left:auto;margin-right:auto}
 .container .grid{max-width:1000px;margin-left:auto;margin-right:auto}
+
+
+/* === Header layout: 3 columns (logo | nav centered | utils right) === */
+.header .bar.bar-3col{display:grid;grid-template-columns:auto 1fr auto;align-items:center}
+.nav.nav-center{justify-self:center;justify-content:center}
+.nav.nowrap{flex-wrap:nowrap;white-space:nowrap;overflow-x:auto}
+.utils{display:flex;gap:8px;justify-content:flex-end;align-items:center}
+/* make buttons slightly more compact so they fit on one row on desktop */
+@media(min-width:860px){
+  .btn{padding:8px 12px}
+}
+/* center hero and cards */
+.hero{text-align:center}
+.card{max-width:980px;margin-left:auto;margin-right:auto}
+.container .grid{max-width:1000px;margin-left:auto;margin-right:auto}
+
+/* Single-row nav with scroll-snap & fade edges on small screens */
+.nav.nowrap{flex-wrap:nowrap;white-space:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:8px}
+.nav.nowrap .btn{scroll-snap-align:center}
+.header::after{
+  content:'';position:absolute;right:0;top:0;bottom:0;width:40px;
+  background:linear-gradient(90deg, rgba(11,16,32,0) 0%, rgba(11,16,32,1) 100%);pointer-events:none
+}
+.header{position:sticky;top:0;z-index:50}

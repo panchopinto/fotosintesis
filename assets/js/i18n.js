@@ -2,6 +2,12 @@
 (function(){
   function getLang(){
     const p = new URLSearchParams(location.search);
+    const urlLang = (p.get('lang')||'').toLowerCase();
+    const stored = (localStorage.getItem('site-lang')||'').toLowerCase();
+    const v = urlLang || stored || 'es';
+    localStorage.setItem('site-lang', v);
+
+    const p = new URLSearchParams(location.search);
     const v = (p.get('lang')||'es').toLowerCase();
     return (v==='en'?'en':'es');
   }
