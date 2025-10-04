@@ -248,3 +248,12 @@ h2{font-size: clamp(18px, 2vw, 24px)}
 
 .btn.pink{border-color: rgba(236, 72, 153, 0.55)}
 .btn.pink:hover{background: rgba(236, 72, 153, 0.14)}
+
+
+/* === Top-right utils (Ayuda / ES / EN) === */
+.header .bar.bar-3col{display:grid;grid-template-columns:auto 1fr auto;align-items:center}
+.nav.nav-center{justify-self:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.utils.top-right{justify-self:end;display:flex;gap:8px;align-items:center}
+@media(max-width:640px){
+  .utils.top-right .label{display:none}
+}

@@ -19,6 +19,13 @@
   const T = {
     // Added site-wide keys
     es: {
+      helpBodyIndex: "Navega con el menú superior. Usa ES/EN para cambiar el idioma. Entra a Proceso o Cloroplasto para ver modelos 3D.",
+      helpBodyProceso: "Modelo 3D: pellizca para acercar/alejar, arrastra para rotar. Usa “🔄 Recentrar” para volver al encuadre. El modelo se carga desde <code>assets/models/fotosintesis__bella_denisa.glb</code>.",
+      helpBodyEcuacion: "Consulta la ecuación global y los detalles. Cambia a EN para verla en inglés.",
+      helpBodyCloroplasto: "Visor 3D del cloroplasto: pellizca, rota y usa “🔄 Recentrar”. Carga por defecto <code>assets/models/chloroplast.glb</code>. Puedes arrastrar otro .glb para visualizar.",
+      helpBodyInteractivo: "Responde el quiz y presiona Enviar para ver tu puntaje. Cambia de idioma con ES/EN.",
+      helpBodyAR: "Activa la cámara si el navegador lo pide. En móviles, la escena ocupa toda la pantalla. Si no ves el modelo, revisa permisos de cámara y movimiento/orientación.",
+
       hModules: "Módulos",
       hKpis: "KPIs del módulo",
       hHowTo: "⚙️ Cómo usar",
@@ -46,6 +53,13 @@ navAR: "🅰️🆁 AR",
       helpBody: "Usa el menú para navegar. En “Cloroplasto 3D” puedes arrastrar y soltar un archivo .glb. Cambia el idioma con ES/EN en la barra superior."
     },
     en: {
+      helpBodyIndex: "Use the top menu to navigate. Switch language with ES/EN. Go to Process or Chloroplast to view 3D models.",
+      helpBodyProceso: "3D model: pinch to zoom, drag to rotate. Use “🔄 Recenter” to reset the view. The model loads from <code>assets/models/fotosintesis__bella_denisa.glb</code>.",
+      helpBodyEcuacion: "See the global equation and details. Switch to ES for Spanish.",
+      helpBodyCloroplasto: "Chloroplast 3D viewer: pinch, rotate, and use “🔄 Recenter”. It loads <code>assets/models/chloroplast.glb</code> by default. You can also drag & drop another .glb.",
+      helpBodyInteractivo: "Answer the quiz and press Submit to see your score. Switch language with ES/EN.",
+      helpBodyAR: "Allow camera permission when prompted. On mobile, the scene is full screen. If you see nothing, check camera and motion/orientation permissions.",
+
       hModules: "Modules",
       hKpis: "Module KPIs",
       hHowTo: "⚙️ How to use",
@@ -95,6 +109,11 @@ tx('navAR','navAR');
   const helpTitle = document.querySelector('#help .title-i18n');
   if(helpTitle){ helpTitle.textContent = T[L]['helpTitle']; }
   const helpBody = document.querySelector('#help .body-i18n');
+  /* help page switch */
+  const page = document.documentElement.getAttribute('data-pagetype')||'';
+  const map = { index:'helpBodyIndex', proceso:'helpBodyProceso', ecuacion:'helpBodyEcuacion', cloroplasto:'helpBodyCloroplasto', interactive:'helpBodyInteractivo', ar:'helpBodyAR' };
+  const key = map[page] || 'helpBodyIndex';
+  if(helpBody){ helpBody.innerHTML = T[L][key]; }
   if(helpBody){ helpBody.textContent = T[L]['helpBody']; }
 
   // Mark active language
