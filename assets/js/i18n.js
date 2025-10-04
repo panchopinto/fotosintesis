@@ -4,7 +4,11 @@
     const p = new URLSearchParams(location.search);
     const urlLang = (p.get('lang')||'').toLowerCase();
     const stored = (localStorage.getItem('site-lang')||'').toLowerCase();
-    const v = urlLang || stored || 'es';
+    let v = urlLang || stored || '';
+    if(!v){
+      const nav = (navigator.language||navigator.userLanguage||'es').toLowerCase();
+      v = nav.startsWith('en') ? 'en' : 'es';
+    }
     localStorage.setItem('site-lang', v);
 
     const p = new URLSearchParams(location.search);
