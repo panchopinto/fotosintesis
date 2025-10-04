@@ -32,3 +32,62 @@ document.addEventListener('click', (e)=>{
     btn.addEventListener('click',(e)=>{ e.preventDefault(); setTheme((localStorage.getItem(key)||'dark')==='dark'?'light':'dark'); });
   }
 })();
+
+
+// A2HS (Add to Home Screen) + Offline banner
+(function(){
+  let deferredPrompt = null;
+  const banner = document.getElementById('sysBanner');
+  const msg = document.getElementById('sysBannerMsg');
+  const btnRetry = document.getElementById('btnRetry');
+  const btnDismiss = document.getElementById('btnDismiss');
+  const btnInstall = document.getElementById('btnInstall');
+
+  function showBanner(text, opts={}){
+    if(!banner || !msg) return;
+    msg.textContent = text;
+    if(btnInstall) btnInstall.style.display = opts.install ? 'inline-flex' : 'none';
+    banner.classList.add('show');
+  }
+  function hideBanner(){ if(banner){ banner.classList.remove('show'); } }
+
+  // Offline/online handling
+  function updateOnlineStatus(){
+    if(!navigator.onLine){
+      showBanner((localStorage.getItem('site-lang')||'es')==='en' ? 'You are offline.' : 'Estás sin conexión.');
+    } else {
+      hideBanner();
+    }
+  }
+  window.addEventListener('online', updateOnlineStatus);
+  window.addEventListener('offline', updateOnlineStatus);
+  if(document.readyState !== 'loading') updateOnlineStatus();
+  else document.addEventListener('DOMContentLoaded', updateOnlineStatus);
+
+  if(btnRetry){
+    btnRetry.addEventListener('click', ()=> location.reload());
+  }
+  if(btnDismiss){
+    btnDismiss.addEventListener('click', hideBanner);
+  }
+
+  // Capture A2HS prompt
+  window.addEventListener('beforeinstallprompt', (e)=>{
+    e.preventDefault();
+    deferredPrompt = e;
+    // Show install CTA in banner
+    const isEN = (localStorage.getItem('site-lang')||'es')==='en';
+    showBanner(isEN ? 'Install this app for quick access.' : 'Instala esta app para acceso rápido.', {install:true});
+  });
+  if(btnInstall){
+    btnInstall.addEventListener('click', async ()=>{
+      if(!deferredPrompt) return;
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if(outcome === 'accepted'){
+        hideBanner();
+      }
+      deferredPrompt = null;
+    });
+  }
+})();

@@ -202,3 +202,22 @@ h2{font-size: clamp(18px, 2vw, 24px)}
 .ar-fullbleed{position:fixed !important; inset:0 !important; width:100vw !important; height:100vh !important; background:#000 !important; z-index: 1}
 
 @media(max-width:360px){ .btn{font-size:12px;padding:6px 8px} }
+
+/* === System banners (offline & install) === */
+.sys-banner{
+  position:fixed; left:var(--space,12px); right:var(--space,12px); bottom:12px; 
+  background:#0e1632; border:1px solid #243255; color:var(--text,#e5e7eb);
+  border-radius:14px; padding:10px 12px; z-index:9999; box-shadow:0 10px 30px rgba(0,0,0,.25);
+  display:none; align-items:center; gap:10px
+}
+.sys-banner.show{display:flex}
+.sys-banner .msg{flex:1}
+.sys-banner .actions{display:flex; gap:8px}
+.sys-banner .btn{padding:8px 12px}
+
+
+/* === Uniformar ancho de TODAS las tarjetas (como '⚙️ Cómo usar') === */
+:root{ --card-max: 940px }
+.card, .panel{ max-width: var(--card-max); margin-left:auto; margin-right:auto }
+.section, .section .grid{ justify-content:center }
+.grid{ max-width: calc(var(--card-max) + 40px); margin-left:auto; margin-right:auto }
