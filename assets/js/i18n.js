@@ -32,24 +32,13 @@
       eqDetail: "En detalle: la luz impulsa la generación de <strong>ATP</strong> y <strong>NADPH</strong> que alimentan el <em>Ciclo de Calvin</em> para fijar CO₂.",
       inputs: "🌞 Entradas",
       outputs: "🍃 Salidas",
-      resDesc: "Modelos sugeridos (.glb) y referencias están listados en el README del proyecto. Aquí puedes añadir más enlaces de libre uso.",
-      tableRes: "🔗 Recurso",
-      tableDesc: "Descripción",
-      res1: "Cloroplasto — Sketchfab",
-      res1d: "Modelo para visualizar tilacoides y estroma.",
-      res2: "Membrana de tilacoide — Sketchfab",
-      res2d: "Detalle de complejos antena.",
-      res3: "ATP sintasa — Sketchfab",
-      res3d: "Visor del complejo F₀F₁ para explicar fotofosforilación."
-    
-      appTitle: "Fotosíntesis — AR Biología",
+appTitle: "Fotosíntesis — AR Biología",
       navHome: "🏠 Inicio",
       navProceso: "🌿 Proceso",
       navEcuacion: "🧪 Ecuación",
       navCloroplasto: "🧬 Cloroplasto 3D",
       navInteractivo: "🎮 Interactivo",
-      navRecursos: "📥 Recursos",
-      navAR: "🅰️🆁 AR",
+navAR: "🅰️🆁 AR",
       navAyuda: "❓ Ayuda",
       heroTitle: "Fotosíntesis: de la luz ☀️ a la glucosa 🍬",
       heroDesc: "Explora las fases luminosa y oscura (Ciclo de Calvin), visualiza el cloroplasto en 3D, y ponte a prueba con un quiz.",
@@ -70,24 +59,13 @@
       eqDetail: "In detail: light drives <strong>ATP</strong> and <strong>NADPH</strong> synthesis feeding the <em>Calvin cycle</em> to fix CO₂.",
       inputs: "🌞 Inputs",
       outputs: "🍃 Outputs",
-      resDesc: "Suggested (.glb) models and references are listed in the project README. Add more open-use links here.",
-      tableRes: "🔗 Resource",
-      tableDesc: "Description",
-      res1: "Chloroplast — Sketchfab",
-      res1d: "Model to visualize thylakoids and stroma.",
-      res2: "Thylakoid membrane — Sketchfab",
-      res2d: "Detail of antenna complexes.",
-      res3: "ATP synthase — Sketchfab",
-      res3d: "F₀F₁ rotary complex to explain photophosphorylation."
-    
-      appTitle: "Photosynthesis — AR Biology",
+appTitle: "Photosynthesis — AR Biology",
       navHome: "🏠 Home",
       navProceso: "🌿 Process",
       navEcuacion: "🧪 Equation",
       navCloroplasto: "🧬 Chloroplast 3D",
       navInteractivo: "🎮 Interactive",
-      navRecursos: "📥 Resources",
-      navAR: "🅰️🆁 AR",
+navAR: "🅰️🆁 AR",
       navAyuda: "❓ Help",
       heroTitle: "Photosynthesis: from light ☀️ to glucose 🍬",
       heroDesc: "Explore the light reactions and Calvin cycle, view the chloroplast in 3D, and test yourself with a quiz.",
@@ -106,8 +84,7 @@
   tx('navEcuacion','navEcuacion');
   tx('navCloroplasto','navCloroplasto');
   tx('navInteractivo','navInteractivo');
-  tx('navRecursos','navRecursos');
-  tx('navAR','navAR');
+tx('navAR','navAR');
   tx('navAyuda','navAyuda');
 
   // Optional elements (index hero)

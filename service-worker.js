@@ -12,7 +12,6 @@ const ASSETS = [
   './pages/ecuacion.html',
   './pages/cloroplasto.html',
   './pages/interactive.html',
-  './pages/recursos.html',
   './pages/ar.html'
 ];
 
