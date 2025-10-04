@@ -221,3 +221,30 @@ h2{font-size: clamp(18px, 2vw, 24px)}
 .card, .panel{ max-width: var(--card-max); margin-left:auto; margin-right:auto }
 .section, .section .grid{ justify-content:center }
 .grid{ max-width: calc(var(--card-max) + 40px); margin-left:auto; margin-right:auto }
+
+
+/* === Slim buttons refresh === */
+.btn{
+  padding: 7px 12px;
+  min-height: 38px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(36,50,85,0.9);
+  box-shadow: none;
+  font-weight: 500;
+}
+.nav .btn{margin:0}
+.btn:hover{background: rgba(255,255,255,0.07); transform: translateY(-1px)}
+.btn:active{transform: translateY(0)}
+
+.btn.blue{border-color: rgba(37, 99, 235, 0.55)}
+.btn.blue:hover{background: rgba(37, 99, 235, 0.14)}
+
+.btn.primary{border-color: rgba(22, 163, 74, 0.55)}
+.btn.primary:hover{background: rgba(22, 163, 74, 0.14)}
+
+.btn.orange{border-color: rgba(245, 158, 11, 0.55)}
+.btn.orange:hover{background: rgba(245, 158, 11, 0.14)}
+
+.btn.pink{border-color: rgba(236, 72, 153, 0.55)}
+.btn.pink:hover{background: rgba(236, 72, 153, 0.14)}
