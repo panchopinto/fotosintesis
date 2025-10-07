@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="es" data-pagetype=\"interactive\">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <title>🎮 Interactivo — Fotosíntesis</title>
-  <link rel="stylesheet" href="../assets/css/styles.css"/>
-  <meta name="theme-color" content="#0b1020"/>
-  <link rel="manifest" href="../manifest.json"/>
-</head>
-<body>
-  
-
-
-
-
-
-
+<!doctype html><html lang='es'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>🎮 Interactivo</title><link rel='stylesheet' href='../assets/css/styles.css'></head><body>
 <header class="header">
   <div class="container bar bar-3col">
     <div class="logo">
@@ -39,29 +22,7 @@
     </div>
   </div>
 </header>
-
-
-
-
-
-
-
-  <main class="container">
-    <h2 class="section-title">🎮 Quiz rápido</h2>
-    <div class="grid">
-      <div class="card card--lg">
-        <div id="quiz"></div>
-        <div style="margin-top:12px;display:flex;gap:10px">
-          <button class="btn primary" id="submit">✅ Enviar</button>
-          <button class="btn" id="reset">🔄 Reiniciar</button>
-        </div>
-        <div id="result" class="notice" style="margin-top:12px;display:none"></div>
-      </div>
-    </div>
-  </main>
-  
-
-
+<main class='container'><h1>🎮 Interactivo</h1></main>
 <footer class="footer container">
   <div class="grid">
     <div class="card card--lg">
@@ -77,37 +38,4 @@
     </div>
   </div>
 </footer>
-
-
-
-  <script src="../assets/js/quiz.js"></script>
-
-<div class="modal" id="help">
-  <div class="panel">
-    <h3 class="title-i18n" style="margin:0 0 8px">Ayuda</h3>
-    <p class="body-i18n"></p>
-    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px"><button class="btn" data-close>Cerrar</button></div>
-  </div>
-  </div>
-</div>
-
-  <script src="/assets/js/i18n.js"></script>
-
-  <script>
-  if('serviceWorker' in navigator){
-    window.addEventListener('load', ()=>{
-      navigator.serviceWorker.register('../service-worker.js').catch(()=>{});
-    });
-  }
-  </script>
-
-<div class="sys-banner" id="sysBanner" role="status" aria-live="polite">
-  <div class="msg" id="sysBannerMsg">You are offline.</div>
-  <div class="actions">
-    <button class="btn" id="btnRetry">🔄 Reintentar</button>
-    <button class="btn" id="btnDismiss">✖</button>
-    <button class="btn primary" id="btnInstall" style="display:none">⬇️ Instalar</button>
-  </div>
-</div>
-</body>
-</html>
+<script src='../assets/js/i18n.js'></script></body></html>
