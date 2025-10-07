@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="es" data-pagetype=\"index\">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <title>Fotosíntesis — AR Biología</title>
-  <link rel="stylesheet" href="assets/css/styles.css"/>
-  <meta name="description" content="Repositorio educativo interactivo sobre el proceso de la fotosíntesis: cloroplasto 3D, ecuación, pasos y actividades."/>
-  <meta property="og:title" content="Fotosíntesis — AR Biología"/>
-  <meta property="og:description" content="Explora la fotosíntesis con 3D, AR, quizzes y recursos descargables."/>
-  <meta property="og:type" content="website"/>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-  <meta name="theme-color" content="#0b1020"/>
-  <link rel="manifest" href="manifest.json"/>
-</head>
-<body>
-  
-
-
-
-
-
-
+<!doctype html><html lang='es'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Inicio</title><link rel='stylesheet' href='assets/css/styles.css'></head><body>
 <header class="header">
   <div class="container bar bar-3col">
     <div class="logo">
@@ -44,52 +22,7 @@
     </div>
   </div>
 </header>
-
-
-
-
-
-
-
-  <main class="container">
-    <section class="hero">
-      <span class="badge">🌱 Proyecto interactivo — versión inicial</span>
-      <h1 id="heroTitle">Fotosíntesis: de la luz ☀️ a la glucosa 🍬</h1>
-      <p id="heroDesc">Explora las fases <strong>luminosa</strong> y <strong>oscura (Ciclo de Calvin)</strong>, visualiza el cloroplasto en 3D, y ponte a prueba con un quiz.</p>
-    </section>
-
-    <div class="grid equal-cards">
-      <div class="card card--md">
-        <h2>📦 Módulos</h2>
-        <ul class="list">
-          <li><span class="num">1</span> <div><strong>🌿 <span class="label">Proceso</span></strong><br/><small>Pasos detallados: tilacoides → ATP/NADPH → Calvin → glucosa.</small></div></li>
-          <li><span class="num">2</span> <div><strong>🧪 <span class="label">Ecuación</span></strong><br/><small>6 CO₂ + 6 H₂O + luz → C₆H₁₂O₆ + 6 O₂</small></div></li>
-          <li><span class="num">3</span> <div><strong>🧬 <span class="label">Cloroplasto 3D</span></strong><br/><small>Visor <code class="snip">&lt;model-viewer&gt;</code> listo para .glb (arrastrar/soltar).</small></div></li>
-          <li><span class="num">4</span> <div><strong>🎮 <span class="label">Interactivo</span></strong><br/><small>Quiz rápido para estudiantes, con feedback inmediato.</small></div></li>
-          <li><span class="num">5</span> <div><strong>🅰️🆁 Modo AR</strong><br/><small>Plantilla con AR.js (marcador Hiro) para probar modelos.</small></div></li>
-        </ul>
-      </div>
-
-      <div class="card card--sm">
-        <h2 id="hKpis" data-i18n="hKpis">📊 KPIs del módulo</h2>
-        <div class="kpi"><span class="emoji">📦</span> <div><strong>5</strong><br/><small>Secciones</small></div></div>
-        <div class="kpi" style="margin-top:8px"><span class="emoji">🗂️</span> <div><strong>Listo para GLB</strong><br/><small>Arrastra tu modelo al visor</small></div></div>
-        <div class="kpi" style="margin-top:8px"><span class="emoji">🚀</span> <div><strong>Publicable</strong><br/><small>Sube a GitHub Pages</small></div></div>
-      </div>
-
-      <div class="card card--lg">
-        <h2 id="hHowTo" data-i18n="hHowTo">⚙️ Cómo usar</h2>
-        <ol class="list">
-          <li><span class="num">1</span><div>Abre <strong>🧬 <span class="label">Cloroplasto 3D</span></strong> y suelta un archivo <code class="snip">.glb</code> (cloroplasto/tilacoide/ATP sintasa).</div></li>
-          <li><span class="num">2</span><div>Prueba el <strong>🎮 Quiz</strong> con tu curso y comparte puntajes.</div></li>
-          <li><span class="num">3</span><div>Activa <strong>🅰️🆁 <span class="label">AR</span></strong> y apunta al marcador para ver el modelo.</div></li>
-        </ol>
-      </div>
-    </div>
-  </main>
-  
-
-
+<main class='container'><h1>Inicio</h1></main>
 <footer class="footer container">
   <div class="grid">
     <div class="card card--lg">
@@ -105,37 +38,4 @@
     </div>
   </div>
 </footer>
-
-
-
-  <script src="assets/js/app.js"></script>
-
-<div class="modal" id="help">
-  <div class="panel">
-    <h3 class="title-i18n" style="margin:0 0 8px">Ayuda</h3>
-    <p class="body-i18n"></p>
-    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px"><button class="btn" data-close>Cerrar</button></div>
-  </div>
-  </div>
-</div>
-
-  <script src="/assets/js/i18n.js"></script>
-
-  <script>
-  if('serviceWorker' in navigator){
-    window.addEventListener('load', ()=>{
-      navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
-    });
-  }
-  </script>
-
-<div class="sys-banner" id="sysBanner" role="status" aria-live="polite">
-  <div class="msg" id="sysBannerMsg">You are offline.</div>
-  <div class="actions">
-    <button class="btn" id="btnRetry">🔄 Reintentar</button>
-    <button class="btn" id="btnDismiss">✖</button>
-    <button class="btn primary" id="btnInstall" style="display:none">⬇️ Instalar</button>
-  </div>
-</div>
-</body>
-</html>
+<script src='assets/js/i18n.js'></script></body></html>

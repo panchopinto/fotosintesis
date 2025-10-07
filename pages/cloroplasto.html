@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="es" data-pagetype=\"cloroplasto\">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <title>🧬 Cloroplasto 3D — Fotosíntesis</title>
-  <link rel="stylesheet" href="../assets/css/styles.css"/>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <meta name="theme-color" content="#0b1020"/>
-  <link rel="manifest" href="../manifest.json"/>
-</head>
-<body>
-  
-
-
-
-
-
-
+<!doctype html><html lang='es'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>🧬 Cloroplasto 3D</title><link rel='stylesheet' href='../assets/css/styles.css'></head><body>
 <header class="header">
   <div class="container bar bar-3col">
     <div class="logo">
@@ -40,38 +22,7 @@
     </div>
   </div>
 </header>
-
-
-
-
-
-
-
-  <main class="container">
-    <h2 class="section-title">🧬 <span class="label">Cloroplasto 3D</span></h2>
-    <div class="grid">
-      <div class="card card--lg">
-        <p>Arrastra un archivo <code class="snip">.glb</code> al panel inferior o usa el botón para cargar. Recomiendo modelos: cloroplasto, membrana de tilacoide o ATP sintasa.</p>
-        <div id="drop" class="notice" style="margin-top:10px">
-          <strong>📥 Suelta tu .glb aquí</strong> o <button class="btn" id="pick">📂 Elegir archivo</button>
-          <input type="file" id="file" accept=".glb,.gltf" style="display:none"/>
-        </div>
-        <div style="margin-top:12px;border-radius:16px;overflow:hidden;border:1px solid #22304d;background:#0a0f22;position:relative">
-          <model-viewer id="viewer" src="../assets/models/chloroplast.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate tone-mapping="neutral" exposure="1.1" style="width:100%;height:520px;background:#0a0f22" camera-orbit="0deg 65deg 2.2m" min-camera-orbit="auto auto 0.5m" max-camera-orbit="auto auto 10m" min-field-of-view="15deg" max-field-of-view="60deg" interaction-prompt="auto" interaction-policy="always"></model-viewer>
-        
-        <div style="margin-top:10px;display:flex;gap:8px;justify-content:flex-end">
-          <button class="btn" id="btnResetModel">🔄 Recentrar</button>
-        
-          <div id="viewerSkeleton" style="position:absolute;inset:0;display:grid;place-items:center;pointer-events:none">
-            <div class="kpi"><span class="emoji">⏳</span> <span>Cargando modelo…</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-  
-
-
+<main class='container'><h1>🧬 Cloroplasto 3D</h1></main>
 <footer class="footer container">
   <div class="grid">
     <div class="card card--lg">
@@ -87,37 +38,5 @@
     </div>
   </div>
 </footer>
-
-
-
-  <script src="../assets/js/loader.js"></script>
-
-<div class="modal" id="help">
-  <div class="panel">
-    <h3 class="title-i18n" style="margin:0 0 8px">Ayuda</h3>
-    <p class="body-i18n"></p>
-    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px"><button class="btn" data-close>Cerrar</button></div>
-  </div>
-  </div>
-</div>
-
-  <script src="/assets/js/i18n.js"></script>
-
-  <script>
-  if('serviceWorker' in navigator){
-    window.addEventListener('load', ()=>{
-      navigator.serviceWorker.register('../service-worker.js').catch(()=>{});
-    });
-  }
-  </script>
-
-<div class="sys-banner" id="sysBanner" role="status" aria-live="polite">
-  <div class="msg" id="sysBannerMsg">You are offline.</div>
-  <div class="actions">
-    <button class="btn" id="btnRetry">🔄 Reintentar</button>
-    <button class="btn" id="btnDismiss">✖</button>
-    <button class="btn primary" id="btnInstall" style="display:none">⬇️ Instalar</button>
-  </div>
-</div>
-</body>
-</html>
+<script src='../assets/js/i18n.js'></script></body></html>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>

@@ -1,0 +1,14 @@
+
+/* UI Modo Estudio / Glosario / Quiz */
+.tour-bar{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-top:10px}
+.tour-bar .left, .tour-bar .right{display:flex;gap:8px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#17203a;border:1px solid #22304d;font-size:13px}
+.tooltip{position:absolute;z-index:40;background:#0e1632;border:1px solid #243255;border-radius:10px;padding:8px 10px;max-width:280px;box-shadow:0 10px 30px rgba(0,0,0,.25);display:none}
+.tooltip.show{display:block}
+.tooltip .title{font-weight:700;margin-bottom:4px}
+.quiz{margin-top:12px;padding:12px;border:1px dashed #2a3b67;border-radius:12px;background:rgba(56,189,248,0.05)}
+.quiz .q{margin-bottom:8px}
+.quiz .opt{display:flex;gap:8px;margin:2px 0}
+.quiz .result{margin-top:8px;font-weight:700}
+.timer{font-variant-numeric:tabular-nums}
+kbd{background:#0e1632;border:1px solid #2a3b67;border-bottom-width:3px;padding:2px 6px;border-radius:6px;font-size:12px}
