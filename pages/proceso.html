@@ -1,4 +1,86 @@
-<!doctype html><html lang='es'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>🌿 Proceso</title><link rel='stylesheet' href='../assets/css/styles.css'></head><body>
+<!DOCTYPE html>
+<html lang="es" data-pagetype=\"proceso\">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>🌿 Proceso — Fotosíntesis</title>
+
+<section class="section" id="procCard">
+  <div class="card card--lg" style="border:1px solid #22304d">
+    <div style="position:relative;border-radius:14px;overflow:hidden;background:#0a0f22">
+      <model-viewer id="procModel"
+        src="../assets/models/fotosintesis__bella_denisa.glb"
+        alt="Modelo 3D del proceso de la fotosíntesis"
+        ar ar-modes="webxr scene-viewer quick-look"
+        camera-controls interaction-policy="always" interaction-prompt="auto"
+        auto-rotate
+        camera-orbit="0deg 65deg 2.2m" min-camera-orbit="auto auto 0.5m" max-camera-orbit="auto auto 10m"
+        min-field-of-view="15deg" max-field-of-view="60deg"
+        style="width:100%;height:420px;background:#0b1020">
+      </model-viewer>
+      <div id="procSkeleton" style="position:absolute;inset:0;display:grid;place-items:center;pointer-events:none">
+        <div class="kpi"><span class="emoji">⏳</span> <span>Cargando modelo…</span></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:10px">
+      <button class="btn" id="btnResetProcModel">🔄 Recentrar</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="procSteps">
+  <div class="card card--lg">
+    <ol class="steps">
+      <li><span class="num">1</span><div><strong>Captura de luz (Tilacoides)</strong> — La clorofila absorbe fotones y excita electrones.</div></li>
+      <li><span class="num">2</span><div><strong>Transporte de electrones</strong> — PSII → citocromo b6f → PSI; se bombea H⁺ al lumen.</div></li>
+      <li><span class="num">3</span><div><strong>Fotofosforilación</strong> — Gradiente de protones impulsa <em>ATP sintasa</em> → ATP.</div></li>
+      <li><span class="num">4</span><div><strong>Reducción</strong> — NADP⁺ + e⁻ → NADPH (lado estromal).</div></li>
+      <li><span class="num">5</span><div><strong>Ciclo de Calvin</strong> — Fijación (RuBisCO), reducción y regeneración de RuBP → G3P y glucosa.</div></li>
+    </ol>
+    <div class="notice" style="margin-top:12px">
+      <span class="emoji">💡</span>
+      <span><strong>Tip</strong>: asocia la <strong>fase luminosa</strong> (tilacoides) con energía (ATP/NADPH) y la <strong>fase oscura</strong> (estroma) con fijación de carbono.</span>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="margin-top:14px">
+  <div class="card" style="border:1px solid #22304d; border-radius:16px; overflow:hidden; background:#0a0f22">
+    <div style="position:relative">
+    <model-viewer id="procModel"
+      src="../assets/models/fotosintesis__bella_denisa.glb"
+      alt="Modelo 3D del proceso de la fotosíntesis"
+      ar ar-modes="webxr scene-viewer quick-look"
+      camera-controls interaction-policy="always" interaction-prompt="auto"
+      camera-orbit="0deg 65deg 2.2m" min-camera-orbit="auto auto 0.5m" max-camera-orbit="auto auto 10m"
+      min-field-of-view="15deg" max-field-of-view="60deg"
+      style="width:100%; height:420px; background:#0b1020" auto-rotate>
+    </model-viewer>
+    <div id="procSkeleton" style="position:absolute;inset:0;display:grid;place-items:center;pointer-events:none">
+      <div class="kpi"><span class="emoji">⏳</span> <span>Cargando modelo…</span></div>
+    </div>
+  </div>
+  </div>
+
+<div style="margin-top:10px;display:flex;gap:8px;justify-content:flex-end">
+  <button class="btn" id="btnResetProcModel">🔄 Recentrar</button>
+</div>
+</section>
+
+
+  <link rel="stylesheet" href="../assets/css/styles.css"/>
+  <meta name="theme-color" content="#0b1020"/>
+  <link rel="manifest" href="../manifest.json"/>
+</head>
+<body>
+  
+
+
+
+
+
+
 <header class="header">
   <div class="container bar bar-3col">
     <div class="logo">
@@ -22,8 +104,31 @@
     </div>
   </div>
 </header>
-<h1>🌿 Proceso</h1>
-<main class='container'><h1>🌿 Proceso</h1></main>
+
+
+
+
+
+
+
+  <main class="container">
+    <h2 class="section-title"><span data-i18n="navProceso">🌿 <span class="label">Proceso</span></span></h2>
+    <div class="grid">
+      <div class="card card--lg">
+        <ol class="list">
+          \1<span data-i18n="step1">\2</span>\3
+          \1<span data-i18n="step2">\2</span>\3
+          \1<span data-i18n="step3">\2</span>\3
+          \1<span data-i18n="step4">\2</span>\3
+          \1<span data-i18n="step5">\2</span>\3
+        </ol>
+        <div class="notice" style="margin-top:12px"><span data-i18n="tipPhase">💡 Tip ...</span><strong>fase luminosa</strong> (tilacoides) con energía (ATP/NADPH) y <strong>fase oscura</strong> (estroma) con fijación de carbono.</div>
+      </div>
+    </div>
+  </main>
+  
+
+
 <footer class="footer container">
   <div class="grid">
     <div class="card card--lg">
@@ -39,26 +144,57 @@
     </div>
   </div>
 </footer>
-<script src='../assets/js/i18n.js'></script></body></html>
-<section class="section">
-  <div class="card card--lg">
-    <div style="position:relative;border-radius:14px;overflow:hidden;background:#0a0f22">
-      <model-viewer id="procModel"
-        src="../assets/models/fotosintesis__bella_denisa.glb"
-        alt="Modelo 3D del proceso de la fotosíntesis"
-        ar ar-modes="webxr scene-viewer quick-look"
-        camera-controls auto-rotate interaction-policy="always" interaction-prompt="auto"
-        camera-orbit="0deg 65deg 2.2m"
-        style="width:100%;height:420px;background:#0b1020">
-      </model-viewer>
-      <div id="procSkeleton" style="position:absolute;inset:0;display:grid;place-items:center;pointer-events:none">
-        <div class="kpi"><span class="emoji">⏳</span> <span>Cargando modelo…</span></div>
-      </div>
-    </div>
-    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:10px">
-      <button class="btn" id="btnResetProcModel">🔄 Recentrar</button>
-    </div>
+
+
+
+
+<div class="modal" id="help">
+  <div class="panel">
+    <h3 class="title-i18n" style="margin:0 0 8px">Ayuda</h3>
+    <p class="body-i18n"></p>
+    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px"><button class="btn" data-close>Cerrar</button></div>
   </div>
-</section>
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<script>(function(){const v=document.getElementById('procModel');const s=document.getElementById('procSkeleton');const b=document.getElementById('btnResetProcModel');if(!v)return;const o='0deg 65deg 2.2m';const src=v.getAttribute('src');function sk(x){if(s) s.style.display=x?'grid':'none'};v.addEventListener('load',()=>sk(false));if(b){b.addEventListener('click',()=>{if(src){v.src=src;sk(true)}v.cameraOrbit=o;});}})();</script>
+  </div>
+</div>
+
+  <script src="/assets/js/i18n.js"></script>
+
+  <script>
+  if('serviceWorker' in navigator){
+    window.addEventListener('load', ()=>{
+      navigator.serviceWorker.register('../service-worker.js').catch(()=>{});
+    });
+  }
+  </script>
+
+<div class="sys-banner" id="sysBanner" role="status" aria-live="polite">
+  <div class="msg" id="sysBannerMsg">You are offline.</div>
+  <div class="actions">
+    <button class="btn" id="btnRetry">🔄 Reintentar</button>
+    <button class="btn" id="btnDismiss">✖</button>
+    <button class="btn primary" id="btnInstall" style="display:none">⬇️ Instalar</button>
+  </div>
+</div>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<script>
+// /* procModel controls */
+(function(){
+  const viewer = document.getElementById('procModel');
+  const sk = document.getElementById('procSkeleton');
+  const btn = document.getElementById('btnResetProcModel');
+  if(!viewer) return;
+  const defOrbit = '0deg 65deg 2.2m';
+  const defSrc = viewer.getAttribute('src');
+  function showSk(v){ if(sk) sk.style.display = v ? 'grid' : 'none'; }
+  viewer.addEventListener('load', ()=> showSk(false));
+  if(btn){
+    btn.addEventListener('click', ()=>{
+      if(defSrc){ viewer.src = defSrc; showSk(true); }
+      viewer.cameraOrbit = defOrbit;
+    });
+  }
+})();
+</script>
+</body>
+</html>
